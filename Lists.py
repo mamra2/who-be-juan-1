@@ -5,8 +5,7 @@ class Responses:
     def __init__(self, message):
 
         self.responses_enri = ["https://c.tenor.com/lVLSSglhk1cAAAAC/monkey-cymbals.gif",
-                               "https://c.tenor.com/7Glf51FDQZQAAAAM/monkey-annoying.gif",
-                               ]
+                               "https://c.tenor.com/7Glf51FDQZQAAAAM/monkey-annoying.gif"]
         self.responses = ["who be juan kanobi"]
 
         self.responses_olek = [f"Olha {message.author.name} sobes ao {random.randint(0, 1000)}º andar e saltas.",
