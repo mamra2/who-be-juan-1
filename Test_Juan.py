@@ -8,6 +8,8 @@ class MyBot(discord.Client):
 
     async def on_ready(self):
         print('Logged on as {0}!'.format(self.user))
+        channel = discord.utils.get(client.get_all_channels(), name = "general")
+        await client.get_channel(channel.id).send("Ahhh shit here we go again...")
 
     async def on_message(self, message):
         commands = ["who be juan olek", "who be juan enri", "who be juan help", "who be juan", "who be juan trabalho", "who be juan trabalha"]
@@ -17,19 +19,25 @@ class MyBot(discord.Client):
                      "Isso dá muito trabalho...", "@rogue#0001 faz tu!", "https://media1.tenor.com/images/5ad50b6db3dc7ed4ca10dd65d4ea84c2/tenor.gif?itemid=11811769"]
         if message.content == commands[0]:
             await message.channel.send(responses[0])
+
         elif message.content == commands[1]:
             number = random.randint(1, 2)
             await message.channel.send(responses[number])
+
         elif message.content == commands[2]:
             response = "\n".join(commands)
             await message.channel.send(response)
+
         elif message.content == commands[3]:
             await message.channel.send(responses[2])
+
         elif message.content == commands[4] or message.content == commands[5]:
             number = random.randint(4, 6)
             await message.channel.send(responses[number])
+
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
+
         if "hum" in message.content and not (message.author == self.user):
             await message.channel.send("hum")
 
@@ -43,5 +51,5 @@ class MyBot(discord.Client):
 intents = discord.Intents.default()
 intents.members = True
 client = MyBot(intents=intents)
-# must have a file named config.py and have a fiels name token with the token to work
+# must have a file named config.py and have a field name token with the token to work
 client.run(config.token)
