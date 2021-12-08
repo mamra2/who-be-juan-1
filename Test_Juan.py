@@ -41,6 +41,12 @@ class MyBot(discord.Client):
 
         if "hum" in message.content and not (message.author == self.user):
             await message.channel.send("hum")
+        if "nice" in message.content and "mega" not in message.content and not (message.author == self.user):
+            await message.channel.send("69")
+        if "69" in message.content and not (message.author == self.user):
+            await message.channel.send("nice")
+        if "mega nice" in message.content:
+            await message.channel.send("42069")
 
     async def on_member_join(self, member):
         guild = member.guild
