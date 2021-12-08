@@ -34,12 +34,9 @@ class MyBot(discord.Client):
             await message.channel.send("hum")
 
     async def on_member_join(self, member):
-        print("here")
         guild = member.guild
-        print(guild)
         if guild.system_channel is not None:
             message = f"Olha quem é ele/a!!!\n Parece que o/a {member.name} decidiu aparecer."
-            print(message)
             await guild.system_channel.send(message)
 
 
