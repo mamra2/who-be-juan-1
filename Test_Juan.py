@@ -2,38 +2,39 @@ import discord
 import random
 
 import config
+import Lists
+import commands
 
 
 class MyBot(discord.Client):
 
     async def on_ready(self):
         print('Logged on as {0}!'.format(self.user))
-        channel = discord.utils.get(client.get_all_channels(), name = "general")
+        channel = discord.utils.get(client.get_all_channels(), name="general")
         await client.get_channel(channel.id).send("Ahhh shit here we go again...")
 
     async def on_message(self, message):
-        commands = ["who be juan olek", "who be juan enri", "who be juan help", "who be juan", "who be juan trabalho", "who be juan trabalha"]
-        responses = [f"Olha {message.author.name} sobes ao {random.randint(0,1000)}º andar e saltas.",
-                     "https://c.tenor.com/lVLSSglhk1cAAAAC/monkey-cymbals.gif", "https://c.tenor.com/7Glf51FDQZQAAAAM/monkey-annoying.gif",
-                     "who be juan kanobi",
-                     "Isso dá muito trabalho...", "@rogue#0001 faz tu!", "https://media1.tenor.com/images/5ad50b6db3dc7ed4ca10dd65d4ea84c2/tenor.gif?itemid=11811769"]
-        if message.content == commands[0]:
-            await message.channel.send(responses[0])
 
-        elif message.content == commands[1]:
-            number = random.randint(1, 2)
-            await message.channel.send(responses[number])
+        responses = Lists.Responses(message)
+        commands_list = commands.commands
 
-        elif message.content == commands[2]:
-            response = "\n".join(commands)
+        if message.content == commands_list[0]:
+            await message.channel.send(responses.get_responses_olek(0))
+
+        elif message.content == commands_list[1]:
+            number = random.randint(0, 1)
+            await message.channel.send(responses.get_responses_enri(number))
+
+        elif message.content == commands_list[2]:
+            response = "\n".join(commands_list)
             await message.channel.send(response)
 
-        elif message.content == commands[3]:
-            await message.channel.send(responses[2])
+        elif message.content == commands_list[3]:
+            await message.channel.send(responses.get_response(0))
 
-        elif message.content == commands[4] or message.content == commands[5]:
-            number = random.randint(4, 6)
-            await message.channel.send(responses[number])
+        elif message.content == commands_list[4] or message.content == commands_list[5]:
+            number = random.randint(1, 3)
+            await message.channel.send(responses.get_responses_olek(number))
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
