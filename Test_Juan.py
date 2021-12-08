@@ -12,7 +12,7 @@ class MyBot(discord.Client):
     async def on_message(self, message):
         commands = ["who be juan olek", "who be juan enri", "who be juan help", "who be juan"]
         responses = [f"Olha {message.author.name} sobes ao {random.randint(0,1000)}º andar e saltas.",
-                     "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fpt%2Ffree-png-nvdjt&psig=AOvVaw1X2eir3P_6rFufQriGXwCJ&ust=1639070346208000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjt4__a1PQCFQAAAAAdAAAAABAD",
+                     "https://w7.pngwing.com/pngs/837/520/png-transparent-a-monkey-s-orientation-chimpanzee-cymbal-banging-monkey-toy-monkey-animals-snout-cymbal-thumbnail.png",
                      "who be juan kanobi"]
         if message.content == commands[0]:
             await message.channel.send(responses[0])
@@ -43,3 +43,4 @@ intents.members = True
 client = MyBot(intents=intents)
 #must have a file named config.py and have a fiels name token with the token to work
 client.run(config.token)
+
