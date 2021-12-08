@@ -33,7 +33,7 @@ class MyBot(discord.Client):
             await message.channel.send(responses.get_response(0))
 
         elif message.content == commands_list[4] or message.content == commands_list[5]:
-            number = random.randint(1, 3)
+            number = random.randint(1, 4)
             await message.channel.send(responses.get_responses_olek(number))
 
         if "jura" in message.content:

@@ -12,7 +12,8 @@ class Responses:
         self.responses_olek = [f"Olha {message.author.name} sobes ao {random.randint(0, 1000)}º andar e saltas.",
                                "Isso dá muito trabalho...",
                                "@rogue#0001 faz tu!",
-                               "https://media1.tenor.com/images/5ad50b6db3dc7ed4ca10dd65d4ea84c2/tenor.gif?itemid=11811769"]
+                               "https://media1.tenor.com/images/5ad50b6db3dc7ed4ca10dd65d4ea84c2/tenor.gif?itemid=11811769",
+                               "levas com a garrafa"]
 
 
     def get_response(self, number):
