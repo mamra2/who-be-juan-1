@@ -6,5 +6,6 @@ commands = ["who be juan olek",
             "who be juan trabalha",
             "who be juan joke",
             "who be juan negro",
-            "who be juan kill"
+            "who be juan kill",
+            "who be juan drop"
             ]

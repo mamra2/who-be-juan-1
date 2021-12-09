@@ -24,7 +24,7 @@ class MyBot(discord.Client):
             await message.channel.send(responses.responses_olek[0])
 
         elif message.content == commands_list[1]:
-            number = random.randint(0, len(responses.responses_enri))
+            number = random.randint(0, len(responses.responses_enri)-1)
             await message.channel.send(responses.responses_enri[number])
 
         elif message.content == commands_list[2]:
@@ -35,20 +35,41 @@ class MyBot(discord.Client):
             await message.channel.send(responses.responses[0])
 
         elif message.content == commands_list[4] or message.content == commands_list[5]:
-            number = random.randint(1, len(responses.responses_olek))
+            number = random.randint(1, len(responses.responses_olek) - 1)
             await message.channel.send(responses.responses_olek[number])
 
         elif message.content == commands_list[6]:
             await message.channel.send(pyjokes.get_joke(category="all"))
             
         elif message.content == commands_list[7]:
-            number = random.randint(0, len(responses.responses_negro))
+            number = random.randint(0, len(responses.responses_negro)-1)
             await message.channel.send(responses.responses_negro[number])
 
-        elif message.content == commands_list[8]:
-            a = "```" + cowsay.get_output_string("cow", "mate-se, fachabor") + "```"
+        elif commands_list[8] in message.content and message.author != self.user:
+            if message.content[17:] != "":
+                await message.channel.send(message.content[17:])
+
+            number = random.randint(0, len(responses.responses_kill)-1)
+            a = "```" + cowsay.get_output_string("cow", f"{responses.responses_kill[number]}") + "```"
             await message.channel.send(a)
 
+        elif message.content == commands_list[9]:
+            number = random.randint(1, len(responses.responses)-1)
+            a = f"""```
+                                            ═▂▄▄▓▄▄▂
+                                ◢◤ █▀▀████▄▄▄▄◢◤
+                                █▄ █ █▄ ███▀▀▀▀▀▀▀╬
+                                ◥█████◤
+                                ══╩══╩═
+                                ╬═╬
+                                ╬═╬ just dropped down to say
+                                ╬═╬
+                                ╬═╬ You’re hella {responses.responses[number]}
+                                ╬═╬☻/
+                                ╬═╬/▌
+                                ╬═╬/ l
+                                            ```"""
+            await message.channel.send(a)
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")

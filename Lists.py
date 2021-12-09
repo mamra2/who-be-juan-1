@@ -17,13 +17,40 @@ class Responses:
                        "Hitler estava a caminhar num campo de concentração quando ouve “sniff, sniff…”.\nVira-se e vê uma menina a chorar enquanto mexia num cinzeiro com o dedo. Hitler aproxima-se, mete-lhe a mão por cima do ombro e pergunta:\n– Era alguém conhecido?",
                        "Qual é a diferença entre uma pizza e um judeu?\nA pizza quando vai ao forno não grita."
                        ]
-    responses = ["who be juan kanobi"]
+    responses = ["who be juan kanobi",
+                 "gay🚫🧢",
+                 "cute,",
+                 "fat",
+                 "ugly"]
+
+    responses_kill = ["mate-se, fachabor",
+                      "O Tejo está à sua espera, atire-se."]
 
     def __init__(self, message):
         pig_enri = "```" + cowsay.get_output_string("pig", "macacos?") + "```"
         self.responses_enri = ["https://c.tenor.com/lVLSSglhk1cAAAAC/monkey-cymbals.gif",
                                "https://c.tenor.com/7Glf51FDQZQAAAAM/monkey-annoying.gif",
-                               pig_enri]
+                               pig_enri,
+                               """
+                               ┈┈┈┈┈┈┈┈┈┈┈?????????????
+┈┈╱▔▔▔▔▔╲┈┈┈??????????
+┈╱┈┈╱▔╲╲╲▏┈┈┈?????┈
+╱┈┈╱━╱▔▔▔▔▔╲━╮┈┈
+▏┈▕┃▕╱▔╲╱▔╲▕╮┃┈┈
+▏┈▕╰━▏▊▕▕▋▕▕━╯┈┈
+╲┈┈╲╱▔╭╮▔▔┳╲╲┈┈┈
+┈╲┈┈▏╭━━━━╯▕▕┈┈┈
+┈┈╲┈╲▂▂▂▂▂▂╱╱┈┈┈
+┈┈┈┈▏┊┈┈┈┈┊┈┈┈╲┈
+┈┈┈┈▏┊┈ This ┈┊▕╲┈┈╲
+┈╱▔. ┈ain't it chief ▕╱▔╲▕
+┈▏┈┈┈╰┈┈┈┈╯┈┈┈▕▕
+┈╲┈┈┈╲┈┈┈┈╱┈┈┈╱┈╲
+┈┈╲┈┈▕▔▔▔▔▏┈┈╱╲╲╲▏
+┈╱▔┈┈▕┈┈┈┈▏┈┈▔╲▔▔
+┈╲▂▂▂╱┈┈┈┈╲▂▂▂╱┈
+
+                               """]
 
         self.responses_olek = [f"Olha {message.author.mention} sobes ao {random.randint(0, 1000)}º andar e saltas.",
                                "Isso dá muito trabalho...",
