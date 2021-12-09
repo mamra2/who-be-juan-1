@@ -1,6 +1,7 @@
 import discord
 import random
 import pyjokes
+import cowsay
 
 import config
 import Lists
@@ -36,21 +37,31 @@ class MyBot(discord.Client):
         elif message.content == commands_list[4] or message.content == commands_list[5]:
             number = random.randint(1, len(responses.responses_olek))
             await message.channel.send(responses.responses_olek[number])
+
         elif message.content == commands_list[6]:
             await message.channel.send(pyjokes.get_joke(category="all"))
+            
         elif message.content == commands_list[7]:
             number = random.randint(0, len(responses.responses_negro))
             await message.channel.send(responses.responses_negro[number])
+
+        elif message.content == commands_list[8]:
+            a = "```" + cowsay.get_output_string("cow", "mate-se, fachabor") + "```"
+            await message.channel.send(a)
+
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
 
         if "hum" in message.content and not (message.author == self.user):
             await message.channel.send("hum")
+
         if "nice" in message.content and "mega" not in message.content and not (message.author == self.user):
             await message.channel.send("69")
+
         if "69" in message.content and not (message.author == self.user):
             await message.channel.send("nice")
+
         if "mega nice" in message.content:
             await message.channel.send("42069")
 

@@ -1,5 +1,7 @@
 import random
 
+import cowsay
+
 
 class Responses:
     responses_negro = ["Qual foi a última coisa que passou pela cabeça da princesa Diana?\nO rádio",
@@ -15,11 +17,13 @@ class Responses:
                        "Hitler estava a caminhar num campo de concentração quando ouve “sniff, sniff…”.\nVira-se e vê uma menina a chorar enquanto mexia num cinzeiro com o dedo. Hitler aproxima-se, mete-lhe a mão por cima do ombro e pergunta:\n– Era alguém conhecido?",
                        "Qual é a diferença entre uma pizza e um judeu?\nA pizza quando vai ao forno não grita."
                        ]
+    responses = ["who be juan kanobi"]
 
     def __init__(self, message):
+        pig_enri = "```" + cowsay.get_output_string("pig", "macacos?") + "```"
         self.responses_enri = ["https://c.tenor.com/lVLSSglhk1cAAAAC/monkey-cymbals.gif",
-                               "https://c.tenor.com/7Glf51FDQZQAAAAM/monkey-annoying.gif"]
-        self.responses = ["who be juan kanobi"]
+                               "https://c.tenor.com/7Glf51FDQZQAAAAM/monkey-annoying.gif",
+                               pig_enri]
 
         self.responses_olek = [f"Olha {message.author.mention} sobes ao {random.randint(0, 1000)}º andar e saltas.",
                                "Isso dá muito trabalho...",
