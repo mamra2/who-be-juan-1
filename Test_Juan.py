@@ -1,5 +1,6 @@
 import discord
 import random
+import pyjokes
 
 import config
 import Lists
@@ -35,6 +36,8 @@ class MyBot(discord.Client):
         elif message.content == commands_list[4] or message.content == commands_list[5]:
             number = random.randint(1, 4)
             await message.channel.send(responses.get_responses_olek(number))
+        elif message.content == commands_list[6]:
+            await message.channel.send(pyjokes.get_joke(category="all"))
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
