@@ -4,5 +4,6 @@ commands = ["who be juan olek",
             "who be juan",
             "who be juan trabalho",
             "who be juan trabalha",
-            "who be juan joke"
+            "who be juan joke",
+            "who be juan negro"
             ]

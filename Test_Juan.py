@@ -20,24 +20,27 @@ class MyBot(discord.Client):
         commands_list = commands.commands
 
         if message.content == commands_list[0]:
-            await message.channel.send(responses.get_responses_olek(0))
+            await message.channel.send(responses.responses_olek[0])
 
         elif message.content == commands_list[1]:
-            number = random.randint(0, 1)
-            await message.channel.send(responses.get_responses_enri(number))
+            number = random.randint(0, len(responses.responses_enri))
+            await message.channel.send(responses.responses_enri[number])
 
         elif message.content == commands_list[2]:
             response = "\n".join(commands_list)
             await message.channel.send(response)
 
         elif message.content == commands_list[3]:
-            await message.channel.send(responses.get_response(0))
+            await message.channel.send(responses.responses[0])
 
         elif message.content == commands_list[4] or message.content == commands_list[5]:
-            number = random.randint(1, 4)
-            await message.channel.send(responses.get_responses_olek(number))
+            number = random.randint(1, len(responses.responses_olek))
+            await message.channel.send(responses.responses_olek[number])
         elif message.content == commands_list[6]:
             await message.channel.send(pyjokes.get_joke(category="all"))
+        elif message.content == commands_list[7]:
+            number = random.randint(0, len(responses.responses_negro))
+            await message.channel.send(responses.responses_negro[number])
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
