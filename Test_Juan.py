@@ -73,6 +73,12 @@ class MyBot(discord.Client):
                                             ```"""
             await message.channel.send(a)
 
+
+            """
+            NAO MEXER... NAO ME PERGUNTEM PK MAS FUNCIONA
+            """
+
+
         elif message.content.startswith("who be juan join"):
             if message.author.voice is None:
                 await message.channel.send("Please join a voice channel to use this command")
@@ -86,6 +92,11 @@ class MyBot(discord.Client):
                 await message.channel.send("Please join a voice channel to use this command")
             else:
                 await voice_client.disconnect()
+
+                """
+                NAO MEXER... NAO ME PERGUNTEM PK MAS FUNCIONA
+                """
+
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
