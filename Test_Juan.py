@@ -2,6 +2,8 @@ import discord
 import random
 import pyjokes
 import cowsay
+from discord import client
+
 
 import config
 import Lists
@@ -70,6 +72,20 @@ class MyBot(discord.Client):
                                 ╬═╬/ l
                                             ```"""
             await message.channel.send(a)
+
+        elif message.content.startswith("who be juan join"):
+            if message.author.voice is None:
+                await message.channel.send("Please join a voice channel to use this command")
+            else:
+                channel1 = message.author.voice.channel
+                global voice_client
+                voice_client = await channel1.connect()
+
+        elif message.content.startswith("who be juan leave"):
+            if message.author.voice is None:
+                await message.channel.send("Please join a voice channel to use this command")
+            else:
+                await voice_client.disconnect()
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
