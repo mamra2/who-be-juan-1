@@ -78,6 +78,10 @@ class MyBot(discord.Client):
             NAO MEXER... NAO ME PERGUNTEM PK MAS FUNCIONA
             """
 
+        elif message.content == commands_list[10]:
+            number = random.randint(0, len(responses.responses_flirt)-1)
+            await message.channel.send(responses.responses_flirt[number])
+
         elif message.content.startswith(commands_list[11]):
             translate = message.content[22:]
             print(translate)
@@ -108,13 +112,13 @@ class MyBot(discord.Client):
             FFMPEG_OPTIONS = {'before_option': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
                               'options': '-vn'}
             YDL_OPTIONS = {'format': 'bestaudio/best'}
-            vc = ctx.voice_client
+            vc = voice_client
             with youtube_dl.YoutubeDL(YDL_OPTIONS) as ydl:
                 print(message.content[17:])
                 info = ydl.extract_info(message.content[17:], download=False)
                 url2 = info['formats'][0]['url']
                 print(url2)
-                source = await discord.FFmpegOpusAudio.from_probe(url2, **FFMPEG_OPTIONS)
+                source = await discord.FFmpegPCMAudio(executable="ffmpeg", source=url2)
                 vc.play(source)
 
         if "jura" in message.content:
