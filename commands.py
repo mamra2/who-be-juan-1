@@ -9,3 +9,8 @@ commands = ["who be juan olek",
             "who be juan kill",
             "who be juan drop"
             ]
+commands_music = ["who be juan join",
+                  "who be juan leave",
+                  "who be juan play",
+                  "who be juan resume",
+                  "who be juan pause"]

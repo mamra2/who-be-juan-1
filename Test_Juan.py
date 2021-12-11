@@ -77,7 +77,7 @@ class MyBot(discord.Client):
             """
 
 
-        elif message.content.startswith("who be juan join"):
+        elif message.content.startswith(commands.commands_music[0]):
             if message.author.voice is None:
                 await message.channel.send("Please join a voice channel to use this command")
             else:
@@ -85,7 +85,7 @@ class MyBot(discord.Client):
                 global voice_client
                 voice_client = await channel1.connect()
 
-        elif message.content.startswith("who be juan leave"):
+        elif message.content.startswith(commands.commands_music[1]):
             if message.author.voice is None:
                 await message.channel.send("Please join a voice channel to use this command")
             else:
