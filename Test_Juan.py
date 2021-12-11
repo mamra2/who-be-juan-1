@@ -99,16 +99,33 @@ class MyBot(discord.Client):
         elif message.content.startswith(commands.commands_music[2]):
             FFMPEG_OPTIONS = {'before_option': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
                               'options': '-vn'}
-            YDL_OPTIONS = {'format': 'bestaudio'}
+            YDL_OPTIONS = {'format': 'bestaudio/best'}
+            vc = ctx.voice_client
             with youtube_dl.YoutubeDL(YDL_OPTIONS) as ydl:
                 print(message.content[17:])
                 info = ydl.extract_info(message.content[17:], download=False)
                 url2 = info['formats'][0]['url']
+                print(url2)
                 source = await discord.FFmpegOpusAudio.from_probe(url2, **FFMPEG_OPTIONS)
-                voice_client.play(source)
+                vc.play(source)
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
+
+        if any(response in message.content for response in responses.responses_censured) and not (message.author == self.user):
+            await message.channel.send("Olha a linguagem!")
+
+        if "wtf" in message.content:
+            await message.channel.send("Tem calma colega")
+
+        if "NAO" in message.content:
+            await message.channel.send("SIMMMMM")
+
+        if any(response in message.content for response in responses.responses_explanations):
+            await message.channel.send("explaainnn")
+
+        if "??" in message.content and not (message.author == self.user):
+            await message.channel.send("??")
 
         if "hum" in message.content and not (message.author == self.user):
             await message.channel.send("hum")

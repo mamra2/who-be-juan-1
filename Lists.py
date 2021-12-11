@@ -26,6 +26,10 @@ class Responses:
     responses_kill = ["mate-se, fachabor",
                       "O Tejo está à sua espera, atire-se."]
 
+    responses_censured = ["fds", "crlh", "puta", "merda", "caralho", "69", "fornicar"]
+
+    responses_explanations = ["awn?", "como assim", "ahn?", "what?", "explica"]
+
     def __init__(self, message):
         pig_enri = "```" + cowsay.get_output_string("pig", "macacos?") + "```"
         self.responses_enri = ["https://c.tenor.com/lVLSSglhk1cAAAAC/monkey-cymbals.gif",
