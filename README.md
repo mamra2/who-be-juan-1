@@ -7,4 +7,5 @@ need...
 - ```pip install discord ```
 - ```pip install pyjokes```
 - ```pip install youtube_dl  ```
-- must have ffmpeg ```git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg```
+- ```pip install PyNaCl```
+- - must have ffmpeg ```git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg```
