@@ -110,6 +110,9 @@ class MyBot(discord.Client):
         if "mega nice" in message.content:
             await message.channel.send("42069")
 
+        if "imagina" in message.content and not (message.author == self.user):
+            await message.channel.send("Mas imagina mesmo!!")
+
     async def on_member_join(self, member):
         guild = member.guild
         if guild.system_channel is not None:
