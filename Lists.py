@@ -27,7 +27,7 @@ class Responses:
     responses_kill = ["mate-se, fachabor",
                       "O Tejo está à sua espera, atire-se."]
 
-    responses_censured = ["fds", "crlh", "puta", "merda", "caralho", "69", "fornicar"]
+    responses_censured = ["fds", "crlh", "puta", "merda", "caralho", "69", "fornicar", "shit"]
 
     responses_explanations = ["awn?", "como assim", "ahn?", "what?", "explica"]
 

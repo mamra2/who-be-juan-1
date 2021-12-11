@@ -4,6 +4,7 @@ import pyjokes
 import cowsay
 import youtube_dl
 from discord import client
+from google_translator_simplified import Translator
 
 import config
 import Lists
@@ -76,6 +77,13 @@ class MyBot(discord.Client):
             """
             NAO MEXER... NAO ME PERGUNTEM PK MAS FUNCIONA
             """
+
+        elif message.content.startswith(commands_list[11]):
+            translate = message.content[22:]
+            print(translate)
+            detected_language = Translator.detect_lang(translate)
+            print(detected_language)
+            await message.channel.send(Translator.get_translation('pt', translate, detected_language))
 
 
         elif message.content.startswith(commands.commands_music[0]):
