@@ -4,6 +4,7 @@ import cowsay
 
 
 class Responses:
+    responses_flirt = ["Ohh hey girl, theres a shopping sale at my house!\nClothes are 100% off..."]
     responses_negro = ["Qual foi a última coisa que passou pela cabeça da princesa Diana?\nO rádio",
                        "Porque é que não existem medicamentos na Etiópia?\nPorque não podem ser tomados em jejum.",
                        "O sujeito vai ao médico:\n– Doutor, tenho tendências suicidas. O que faço?\n– Em primeiro lugar, pague a consulta.",

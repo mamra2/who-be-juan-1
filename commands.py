@@ -7,7 +7,8 @@ commands = ["who be juan olek",
             "who be juan joke",
             "who be juan negro",
             "who be juan kill",
-            "who be juan drop"
+            "who be juan drop",
+            "who be juan flirt"
             ]
 commands_music = ["who be juan join",
                   "who be juan leave",
