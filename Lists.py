@@ -16,7 +16,16 @@ class Responses:
                        "O que se chama a dois sem-abrigos a atirar pedras um ao outro?\nUma luta de almofadas.",
                        "Sabias que sem árabes não tinha acontecido o 11/9?\nTinha acontecido o XI/IX.",
                        "Hitler estava a caminhar num campo de concentração quando ouve “sniff, sniff…”.\nVira-se e vê uma menina a chorar enquanto mexia num cinzeiro com o dedo. Hitler aproxima-se, mete-lhe a mão por cima do ombro e pergunta:\n– Era alguém conhecido?",
-                       "Qual é a diferença entre uma pizza e um judeu?\nA pizza quando vai ao forno não grita."
+                       "Qual é a diferença entre uma pizza e um judeu?\nA pizza quando vai ao forno não grita.",
+                       "Um menino, com uma mão atrás, disse para uma amiguinha:\n– Adivinha o que eu tenho na minha mãozinha…\n– Um rebuçado!\n– Não, paralisia!",
+                       "Mãe, na escola chamam-me mafioso!\n– Não te preocupes, filhinho, amanhã a mãe vai lá e acaba com isso.\n– Boa mãe, mas faz com que pareça um acidente.",
+                       "Porque é que o bebé de 6 anos da Etiópia está a chorar?\nEstá a ter uma crise de meia idade.",
+                       "O que é que os pais da criança da Etiópia deram ao filho do sexto aniversário?\nFlores para a campa",
+                       "Porque é que os pretos não vão para o céu?\nPorque os andaimes não são assim tão altos.",
+                       "O que é um judeu a voar?\nFumo",
+                       "Quando é que sabes que a tua irmã está com o período?\nQuando a pila do teu pai sabe a sangue.",
+                       "Estatística:\n9 em cada 10 pessoas curtem gang rape",
+                       "- Mãe, não gosto da avó!\n- Está bem, então come só as batatas."
                        ]
     responses = ["who be juan kanobi",
                  "gay🚫🧢",
