@@ -73,6 +73,9 @@ class MyBot(discord.Client):
                                             ```"""
             await message.channel.send(a)
 
+        elif message.content == commands_list[10]:
+            number = random.randint(0,len(responses.responses_flirt))
+            await message.channel.send(responses.responses_flirt[number])
             """
             NAO MEXER... NAO ME PERGUNTEM PK MAS FUNCIONA
             """
