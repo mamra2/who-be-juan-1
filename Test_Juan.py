@@ -84,9 +84,7 @@ class MyBot(discord.Client):
 
         elif message.content.startswith(commands_list[11]):
             translate = message.content[22:]
-            print(translate)
             detected_language = Translator.detect_lang(translate)
-            print(detected_language)
             await message.channel.send(Translator.get_translation('pt', translate, detected_language))
 
 
@@ -125,7 +123,8 @@ class MyBot(discord.Client):
             await message.channel.send("JUROOOO")
 
         if any(response in message.content for response in responses.responses_censured) and not (message.author == self.user):
-            await message.channel.send("Olha a linguagem!")
+            number = random.randint(0,len(responses.responses_cen)-1)
+            await message.channel.send(responses.responses_cen[number])
 
         if "wtf" in message.content:
             await message.channel.send("Tem calma colega")

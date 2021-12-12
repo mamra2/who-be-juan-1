@@ -38,6 +38,12 @@ class Responses:
 
     responses_censured = ["fds", "crlh", "puta", "merda", "caralho", "69", "fornicar", "shit"]
 
+    responses_cen = ["Olha a linguagem!",
+                     "É com essa boca que beijas a tua mãe?",
+                     "Tento na língua rapazinho!",
+                     "Vê lá se queres apanhar!",
+                     ]
+
     responses_explanations = ["awn?", "como assim", "ahn?", "what?", "explica"]
 
     def __init__(self, message):
