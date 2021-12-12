@@ -58,6 +58,7 @@ class MyBot(discord.Client):
 
         elif message.content == commands_list[9]:
             number = random.randint(1, len(responses.responses) - 1)
+            number2 = random.randint(1, len(responses.responses_prefix) - 1)
             a = f"""```
                                             ═▂▄▄▓▄▄▂
                                 ◢◤ █▀▀████▄▄▄▄◢◤
@@ -65,7 +66,7 @@ class MyBot(discord.Client):
                                 ◥█████◤
                                 ══╩══╩═
                                 ╬═╬
-                                ╬═╬ just dropped down to say
+                                ╬═╬ just {responses.responses_prefix[number2]} down to say
                                 ╬═╬
                                 ╬═╬ You’re hella {responses.responses[number]}
                                 ╬═╬☻/
@@ -131,6 +132,10 @@ class MyBot(discord.Client):
 
         if "NAO" in message.content:
             await message.channel.send("SIMMMMM")
+
+        if "school shooting" in message.content:
+            number = random.randint(0, len(responses.responses_shooting) - 1)
+            await message.channel.send(responses.responses_shooting[number])
 
         if any(response in message.content for response in responses.responses_explanations):
             number = random.randint(0, len(responses.responses_confusion) - 1)

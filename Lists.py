@@ -25,7 +25,7 @@ class Responses:
                        "O que é um judeu a voar?\nFumo",
                        "Quando é que sabes que a tua irmã está com o período?\nQuando a pila do teu pai sabe a sangue.",
                        "Estatística:\n9 em cada 10 pessoas curtem gang rape",
-                       "- Mãe, não gosto da avó!\n- Está bem, então come só as batatas."
+                       "- Mãe, não gosto da avó!\n- Está bem, então come só as batatas.",
                        ]
     responses = ["who be juan kanobi",
                  "gay🚫🧢",
@@ -33,24 +33,35 @@ class Responses:
                  "fat",
                  "ugly"]
 
-    responses_kill = ["mate-se, fachabor",
-                      "O Tejo está à sua espera, atire-se."]
+    responses_prefix = ["dropped", "kobe"]
 
-    responses_censured = ["fds", "crlh", "puta", "merda", "caralho", "69", "fornicar", "shit"]
+    responses_kill = ["mate-se, fachabor",
+                      "O Tejo está à sua espera, atire-se.",
+                      "Avada Kedavra!!!"]
+
+    responses_censured = ["fds", "crlh", "puta", "merda", "caralho", "69", "fornicar", "shit", "fuck"]
 
     responses_cen = ["Olha a linguagem!",
                      "É com essa boca que beijas a tua mãe?",
                      "Tento na língua rapazinho!",
-                     "Vê lá se queres apanhar!",
+                     "Vê lá se queres apanhar!"
                      ]
 
     responses_confusion = ["explainnn",
                      "Nem ele sabe",
                      "Não inventes!",
                      "Eu e que não sei",
-                     "??"]
+                     "??",
+                     "Não se preocupem, a força está connosco"]
 
     responses_explanations = ["awn?", "como assim", "ahn?", "what?", "explica"]
+
+    responses_shooting = ["Por razções legais isto é uma brincadeira!",
+                          "Bora!",
+                          "Eu fico com o Figueira!",
+                          "Tenso",
+                          "F.B.I. open up!"
+                          ]
 
     def __init__(self, message):
         pig_enri = "```" + cowsay.get_output_string("pig", "macacos?") + "```"
@@ -82,4 +93,6 @@ class Responses:
                                "Isso dá muito trabalho...",
                                "@rogue#0001 faz tu!",
                                "https://media1.tenor.com/images/5ad50b6db3dc7ed4ca10dd65d4ea84c2/tenor.gif?itemid=11811769",
-                               "levas com a garrafa"]
+                               "levas com a garrafa",
+                               f"Olha {message.author.mention}... sobes e saltas",
+                               "Não quero"]
