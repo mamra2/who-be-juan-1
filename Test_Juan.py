@@ -133,7 +133,8 @@ class MyBot(discord.Client):
             await message.channel.send("SIMMMMM")
 
         if any(response in message.content for response in responses.responses_explanations):
-            await message.channel.send("explaainnn")
+            number = random.randint(0, len(responses.responses_confusion) - 1)
+            await message.channel.send(responses.responses_confusion[number])
 
         if "??" in message.content and not (message.author == self.user):
             await message.channel.send("??")

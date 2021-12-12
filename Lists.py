@@ -44,6 +44,12 @@ class Responses:
                      "Vê lá se queres apanhar!",
                      ]
 
+    responses_confusion = ["explainnn",
+                     "Nem ele sabe",
+                     "Não inventes!",
+                     "Eu e que não sei",
+                     "??"]
+
     responses_explanations = ["awn?", "como assim", "ahn?", "what?", "explica"]
 
     def __init__(self, message):
