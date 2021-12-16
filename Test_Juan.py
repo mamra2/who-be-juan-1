@@ -106,7 +106,7 @@ class MyBot(discord.Client):
                 """
                 NAO MEXER... NAO ME PERGUNTEM PK MAS FUNCIONA
                 """
-
+# TODO tenatar ver pk que nao reconhece o ffmpeg
         elif message.content.startswith(commands.commands_music[2]):
             FFMPEG_OPTIONS = {'before_option': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
                               'options': '-vn'}
@@ -117,8 +117,10 @@ class MyBot(discord.Client):
                 info = ydl.extract_info(message.content[17:], download=False)
                 url2 = info['formats'][0]['url']
                 print(url2)
-                source = await discord.FFmpegPCMAudio(executable="ffmpeg", source=url2)
-                vc.play(source)
+
+                vc.play(discord.FFmpegPCMAudio(executable="./ffmpeg", source=url2))
+                #source = await discord.FFmpegPCMAudio(executable="ffmpeg", source=url2)
+                #vc.play(source)
 
         if "jura" in message.content:
             await message.channel.send("JUROOOO")
