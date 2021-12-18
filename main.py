@@ -20,7 +20,7 @@ async def on_ready():
     channel = discord.utils.get(client.get_all_channels(), name="general")
     await client.get_channel(channel.id).send("Ahhh shit here we go again...")
 
-# todo testar
+
 @client.event
 async def on_member_join(member):
     guild = member.guild
