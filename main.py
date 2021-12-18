@@ -4,8 +4,9 @@ from discord.ext import commands
 import music
 import config
 
-
-client = commands.Bot(command_prefix="who be juan ", intents=discord.Intents.default())
+intents = discord.Intents.default()
+intents.members = True
+client = commands.Bot(command_prefix="who be juan ", intents=intents)
 
 cogs = [music]
 
@@ -26,6 +27,5 @@ async def on_member_join(member):
     if guild.system_channel is not None:
         message = f"Olha quem é ele!!!\nParece que o {member.mention} decidiu aparecer."
         await guild.system_channel.send(message)
-
 
 client.run(config.token)
